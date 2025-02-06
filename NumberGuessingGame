@@ -2,9 +2,10 @@ import random
 
 def guessing_game():
     answer = random.randint(0,100)
+    i = 0
 
-    while True:
-
+    while True and i < 3:
+        
         user_guess = int(input('Guess the number '))
 
         if user_guess == answer:
@@ -16,5 +17,9 @@ def guessing_game():
 
         else:
             print(f'Your guess of {user_guess} is too high!')
+        
+        i = i+1
+    
+    print(f'You did not guess in time.')
 
 guessing_game()
